@@ -4,6 +4,8 @@ A production-ready marketing site for **Murphy Ventures Technical Services**, a 
 
 Built with React, Vite, TypeScript, Tailwind CSS v4 and Framer Motion. No e-commerce, accounts, admin or backend — enquiries are prepared locally and handed off to WhatsApp.
 
+**Live:** https://murphy-ventures.vercel.app
+
 ---
 
 ## Quick start
@@ -117,7 +119,7 @@ On screens below `lg`, a floating glass dock (`.src/components/layout/MobileDock
 - Per-route `<title>`, description, canonical, Open Graph and Twitter tags via `useSeo`.
 - JSON-LD: `LocalBusiness` (home), `BreadcrumbList` (inner pages), `Product` (detail), `ItemList` (catalogue), `FAQPage` (FAQ).
 - `public/sitemap.xml` (21 URLs) and `public/robots.txt`.
-- **Before launch:** set the real domain in `src/config/site.ts` (`site.url`), then update the absolute URLs in `index.html`, `public/sitemap.xml` and `public/robots.txt` to match.
+- **Domain:** canonical URLs currently use the Vercel production domain. If a custom domain is added, update `site.url` in `src/config/site.ts` plus the absolute URLs in `index.html`, `public/sitemap.xml` and `public/robots.txt`, then redeploy.
 
 ---
 
@@ -143,7 +145,7 @@ On screens below `lg`, a floating glass dock (`.src/components/layout/MobileDock
 
 ## Known gaps / client input required
 
-1. **Live domain** — `murphyventures.ng` is a placeholder used for canonical URLs, OG tags, sitemap and robots. Update it once a domain is chosen.
+1. **Custom domain** — the site runs on the Vercel production URL. Add a custom domain when ready and update the canonical URLs (see Deployment).
 2. **Opening hours** — deliberately not published; the site asks visitors to call first.
 3. **Email address** — not supplied; shown as “Email not yet published”.
 4. **Confirmed prices, models and stock** — every listing is “Price on Request” with availability “unknown”; the ₦120,000–₦1,800,000 range is guidance only.
@@ -154,9 +156,10 @@ On screens below `lg`, a floating glass dock (`.src/components/layout/MobileDock
 
 ## Deployment
 
-Not deployed. To publish:
+Live on Vercel: **https://murphy-ventures.vercel.app** (project `murphy-ventures`, linked to the GitHub repo `Abdurrahman-code19/murphy-ventures`).
 
-1. Set the real domain in `src/config/site.ts` and update absolute URLs in `index.html`, `public/sitemap.xml`, `public/robots.txt`.
-2. `npm run build`.
-3. Upload `dist/` to the host and enable SPA fallback to `index.html`.
-4. Submit `https://<domain>/sitemap.xml` to Google Search Console.
+- `vercel.json` pins the Vite build (`npm run build` → `dist/`) and rewrites unknown paths to `index.html` for SPA deep links.
+- Pushing to `master` triggers a production deployment through the Vercel GitHub integration.
+- Manual deploy: `vercel deploy --prod --yes`.
+- To move to a custom domain: add it in the Vercel project, then update `site.url` plus the absolute URLs in `index.html`, `public/sitemap.xml` and `public/robots.txt` and redeploy.
+- After launch, submit `https://<domain>/sitemap.xml` to Google Search Console.

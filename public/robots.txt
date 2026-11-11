@@ -4,4 +4,4 @@ Allow: /
 # Do not index the form handoff state or 404 page
 Disallow: /404
 
-Sitemap: https://murphyventures.ng/sitemap.xml
+Sitemap: https://murphy-ventures.vercel.app/sitemap.xml
