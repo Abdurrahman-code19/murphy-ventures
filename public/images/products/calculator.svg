@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Illustration of a printing calculator">
+  <g fill="none" stroke="#153B75" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="400" cy="506" rx="230" ry="24" fill="#091B3B" opacity=".06" stroke="none"/>
+    <!-- paper roll housing -->
+    <rect x="470" y="180" width="150" height="106" rx="18" fill="#fff"/>
+    <circle cx="545" cy="233" r="30" fill="#F7F6F2"/>
+    <circle cx="545" cy="233" r="8" fill="#C49A45" stroke="none"/>
+    <!-- paper -->
+    <path d="M500 286c-6 46-10 82-2 114 34 10 76 10 108 0 8-44 4-84-4-114z" fill="#fff"/>
+    <g opacity=".45" stroke-width="2">
+      <path d="M514 312h80M514 332h56M514 352h72M514 372h44"/>
+      <path d="M514 392h86" stroke="#C49A45" stroke-width="3" opacity="1"/>
+    </g>
+    <!-- body / base wedge -->
+    <path d="M154 330h366l60 128c6 14-4 28-19 28H198c-16 0-27-13-23-28z" fill="#fff"/>
+    <path d="M154 330h366" opacity=".45"/>
+    <!-- display -->
+    <rect x="186" y="352" width="176" height="44" rx="6" fill="#091B3B" stroke="none"/>
+    <path d="M202 376h44M256 376h30" stroke="#C49A45" stroke-width="6"/>
+    <g fill="#C49A45" stroke="none" opacity=".9">
+      <rect x="318" y="366" width="8" height="18" rx="2"/>
+      <rect x="332" y="366" width="8" height="18" rx="2"/>
+      <rect x="346" y="366" width="8" height="18" rx="2"/>
+    </g>
+    <!-- keypad -->
+    <g fill="#F7F6F2" stroke-width="2">
+      <rect x="392" y="350" width="34" height="26" rx="4"/>
+      <rect x="434" y="350" width="34" height="26" rx="4"/>
+      <rect x="476" y="350" width="34" height="26" rx="4"/>
+      <rect x="392" y="386" width="34" height="26" rx="4"/>
+      <rect x="434" y="386" width="34" height="26" rx="4"/>
+      <rect x="476" y="386" width="34" height="26" rx="4"/>
+      <rect x="392" y="422" width="34" height="26" rx="4"/>
+      <rect x="434" y="422" width="34" height="26" rx="4"/>
+      <rect x="476" y="422" width="34" height="26" rx="4"/>
+    </g>
+    <rect x="240" y="418" width="92" height="30" rx="6" fill="#C49A45" opacity=".25" stroke="#C49A45"/>
+    <!-- feet -->
+    <path d="M198 486v10M544 486v10"/>
+    <!-- dimension -->
+    <g stroke-width="2" opacity=".4">
+      <path d="M116 330v128M108 330h16M108 458h16"/>
+      <path d="M660 180v150M652 180h16M652 330h16"/>
+    </g>
+  </g>
+  <g fill="#153B75" opacity=".8" font-family="Manrope, system-ui, sans-serif" font-size="15" letter-spacing="3">
+    <text x="116" y="536">OFFICE MACHINES</text>
+  </g>
+</svg>

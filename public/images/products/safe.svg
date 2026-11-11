@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Illustration of a fireproof safe">
+  <g fill="none" stroke="#153B75" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="400" cy="504" rx="238" ry="26" fill="#091B3B" opacity=".06" stroke="none"/>
+    <!-- depth side -->
+    <path d="M540 214l44 38v238l-44 32z" fill="#F7F6F2"/>
+    <path d="M540 214l44 38M584 252v238M540 522l44-32" opacity=".6"/>
+    <!-- body -->
+    <rect x="212" y="200" width="334" height="322" rx="14" fill="#fff"/>
+    <rect x="236" y="224" width="286" height="274" rx="8" fill="#F7F6F2"/>
+    <!-- door inset -->
+    <rect x="260" y="248" width="238" height="226" rx="6" fill="#fff"/>
+    <!-- hinges -->
+    <g fill="#153B75" stroke="none">
+      <rect x="250" y="286" width="10" height="46" rx="5"/>
+      <rect x="250" y="392" width="10" height="46" rx="5"/>
+    </g>
+    <!-- dial -->
+    <circle cx="402" cy="332" r="58" fill="#fff"/>
+    <circle cx="402" cy="332" r="40" fill="#F7F6F2" stroke="#C49A45" stroke-width="4"/>
+    <circle cx="402" cy="332" r="8" fill="#C49A45" stroke="none"/>
+    <path d="M402 332l26-28" stroke="#C49A45" stroke-width="5"/>
+    <g opacity=".55" stroke-width="2">
+      <path d="M402 288v8M402 368v8M358 332h8M438 332h8M371 301l6 6M427 357l6 6M433 301l-6 6M377 357l-6 6"/>
+    </g>
+    <!-- handle -->
+    <path d="M402 414v30M378 414h48" stroke-width="7"/>
+    <!-- gold label plate -->
+    <rect x="300" y="462" width="158" height="8" rx="4" fill="#C49A45" stroke="none"/>
+    <!-- top edge detail -->
+    <path d="M246 200v-10M512 200v-10" opacity=".5"/>
+    <!-- dimension -->
+    <g stroke-width="2" opacity=".4">
+      <path d="M624 200v322M616 200h16M616 522h16"/>
+      <path d="M160 176h30M175 161v30"/>
+    </g>
+    <!-- shield watermark -->
+    <g opacity=".22" transform="translate(650 400)">
+      <path d="M0-34 34-20v24C34 20 18 34 0 42-18 34-34 20-34 4v-24z"/>
+    </g>
+  </g>
+  <g fill="#153B75" opacity=".8" font-family="Manrope, system-ui, sans-serif" font-size="15" letter-spacing="3">
+    <text x="160" y="556">SECURE STORAGE</text>
+  </g>
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Illustration of a banknote counting machine">
+  <g fill="none" stroke="#153B75" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- ground -->
+    <ellipse cx="400" cy="500" rx="245" ry="26" fill="#091B3B" opacity=".06" stroke="none"/>
+    <!-- notes in hopper -->
+    <g opacity=".95">
+      <path d="M262 208 384 186l16 54-122 22z" fill="#C49A45" opacity=".22"/>
+      <path d="M250 224 372 202l14 48-122 22z" fill="#fff"/>
+      <path d="M240 240 362 218l12 44-122 22z" fill="#C49A45" opacity=".28"/>
+    </g>
+    <!-- hopper -->
+    <path d="M228 262h264l20 44H208z" fill="#fff"/>
+    <path d="M208 306h304" stroke="#C49A45"/>
+    <!-- main body -->
+    <rect x="168" y="306" width="424" height="170" rx="20" fill="#fff"/>
+    <path d="M168 338h424" opacity=".35"/>
+    <!-- gold status bar -->
+    <rect x="200" y="440" width="120" height="6" rx="3" fill="#C49A45" stroke="none"/>
+    <!-- control panel -->
+    <rect x="430" y="358" width="126" height="88" rx="10" fill="#F7F6F2"/>
+    <rect x="446" y="374" width="94" height="26" rx="4" fill="#091B3B" stroke="none"/>
+    <path d="M456 387h52" stroke="#C49A45" stroke-width="4"/>
+    <g fill="#153B75" stroke="none">
+      <circle cx="456" cy="424" r="7"/><circle cx="484" cy="424" r="7"/><circle cx="512" cy="424" r="7"/>
+    </g>
+    <!-- output notes -->
+    <g>
+      <path d="M592 332c44-14 78 2 90 26l-7 15c-16-16-46-24-78-14z" fill="#C49A45" opacity=".25"/>
+      <path d="M590 348c48-12 82 6 94 30" fill="none"/>
+      <path d="M588 366c48-10 80 10 92 32" fill="none" opacity=".6"/>
+    </g>
+    <!-- side vents -->
+    <g opacity=".55">
+      <path d="M196 360v86M210 360v86M224 360v86"/>
+    </g>
+    <!-- feet -->
+    <path d="M224 476v18M536 476v18"/>
+    <!-- dimension marks -->
+    <g stroke-width="2" opacity=".45">
+      <path d="M640 306v170"/>
+      <path d="M632 306h16M632 476h16"/>
+      <path d="M190 238h70M190 232v12M260 232v12"/>
+    </g>
+    <!-- blueprint ticks -->
+    <g stroke-width="2" opacity=".35">
+      <path d="M96 168h28M110 154v28"/>
+      <path d="M676 150h20M686 140v20"/>
+    </g>
+  </g>
+  <g fill="#153B75" opacity=".8" font-family="Manrope, system-ui, sans-serif" font-size="15" letter-spacing="3">
+    <text x="96" y="536">CASH HANDLING</text>
+  </g>
+</svg>
