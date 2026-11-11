@@ -15,7 +15,7 @@ export const site = {
     "Murphy Ventures supplies new and fairly used banking and office equipment — banknote counters, time recording machines, fireproof safes, counterfeit detectors and more — and provides equipment repairs in Lagos, Nigeria.",
 
   /** Canonical production URL. Update here and in index.html, sitemap.xml and robots.txt if a custom domain is added. */
-  url: "https://murphy-ventures.vercel.app",
+  url: "https://www.murphyventures.com.ng",
 
   address: {
     street: "208, Abaranje Road, Omo-Oye Bus Stop",
