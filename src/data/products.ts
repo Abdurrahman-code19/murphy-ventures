@@ -26,8 +26,8 @@ export const products: Product[] = [
     summary: "Banknote counter for fast, organised cash handling at the counter.",
     description:
       "A Zenith banknote counting machine listed by Murphy Ventures for cash-handling desks. The exact model, configuration and condition are confirmed on enquiry, together with the current price and availability.",
-    images: ["/images/products/banknote-counter.svg"],
-    imageAlt: "Technical illustration of a Zenith-style banknote counting machine",
+    images: ["/images/products/money-counting-machines/zenith-banknote-counting-machine.webp"],
+    imageAlt: "Zenith banknote counting machine with digital display",
     featured: true,
   },
   {
@@ -42,8 +42,8 @@ export const products: Product[] = [
     summary: "Glory note counter for banks, bureaux and business cash rooms.",
     description:
       "A Glory banknote counting machine referenced in the Murphy Ventures catalogue. Model, condition and available configuration are confirmed on enquiry, along with price and availability.",
-    images: ["/images/products/banknote-counter.svg"],
-    imageAlt: "Technical illustration of a Glory-style banknote counting machine",
+    images: ["/images/products/money-counting-machines/glory-banknote-counting-machine.webp"],
+    imageAlt: "Glory banknote counting and sorting machine",
     featured: false,
   },
   {
@@ -58,8 +58,8 @@ export const products: Product[] = [
     summary: "A selection of note-counting machines for different cash volumes.",
     description:
       "Murphy Ventures supplies banknote counting machines in a range of models and configurations. Tell us how you handle cash and we will confirm suitable options, current pricing and availability.",
-    images: ["/images/products/banknote-counter.svg"],
-    imageAlt: "Technical illustration of a range of banknote counting machines",
+    images: ["/images/products/money-counting-machines/banknote-counting-machines.webp"],
+    imageAlt: "Banknote counting machine with a stack of currency notes",
     featured: false,
   },
   {
@@ -74,8 +74,8 @@ export const products: Product[] = [
     summary: "A budget-conscious note counter option, subject to availability.",
     description:
       "A fairly used banknote counting machine for businesses working to a tighter budget. The model, condition and price are confirmed on enquiry, and availability varies with what is currently in stock.",
-    images: ["/images/products/banknote-counter.svg"],
-    imageAlt: "Technical illustration of a fairly used banknote counting machine",
+    images: ["/images/products/money-counting-machines/fairly-used-banknote-counting-machine.webp"],
+    imageAlt: "Fairly used banknote counting machine",
     featured: false,
   },
   {
@@ -92,8 +92,8 @@ export const products: Product[] = [
     description:
       "The Targetmax TL-50 is a time recording machine listed for attendance and timekeeping use. Confirm the current condition, configuration and price with the Murphy Ventures team.",
     specifications: [{ label: "Model", value: "TL-50" }],
-    images: ["/images/products/time-recorder.svg"],
-    imageAlt: "Technical illustration of a Targetmax TL-50 time recording machine",
+    images: ["/images/products/time-stamp-machines/targetmax-tl-50-time-recording-machine.webp"],
+    imageAlt: "Targetmax time recording machine",
     featured: true,
   },
   {
@@ -108,8 +108,8 @@ export const products: Product[] = [
     summary: "Document time-stamping for offices and institutions.",
     description:
       "A time stamp machine for recording the date and time on documents. Available models and their condition are confirmed on enquiry, together with pricing and availability.",
-    images: ["/images/products/time-recorder.svg"],
-    imageAlt: "Technical illustration of a document time stamp machine",
+    images: ["/images/products/time-stamp-machines/time-stamp-machine.webp"],
+    imageAlt: "Automatic date and time stamp machine",
     featured: false,
   },
   {
@@ -124,8 +124,8 @@ export const products: Product[] = [
     summary: "A fairly used attendance recorder, subject to availability.",
     description:
       "A fairly used time recording machine for offices that need practical timekeeping equipment. The model and condition are confirmed on enquiry; availability depends on current stock.",
-    images: ["/images/products/time-recorder.svg"],
-    imageAlt: "Technical illustration of a fairly used time recording machine",
+    images: ["/images/products/time-stamp-machines/fairly-used-time-recording-machine.webp"],
+    imageAlt: "Fairly used electronic time recording machine",
     featured: false,
   },
   {
@@ -140,8 +140,8 @@ export const products: Product[] = [
     summary: "Fireproof protection for cash, documents and valuables.",
     description:
       "A fireproof safe for protecting cash, documents and valuables. Available sizes and configurations are confirmed on enquiry, along with the current price and availability.",
-    images: ["/images/products/safe.svg"],
-    imageAlt: "Technical illustration of a fireproof safe",
+    images: ["/images/products/fireproof-safes/fireproof-safe.webp"],
+    imageAlt: "Fireproof safe with a digital lock",
     featured: true,
   },
   {
@@ -156,8 +156,8 @@ export const products: Product[] = [
     summary: "Secure storage at a lower cost, subject to availability.",
     description:
       "A fairly used fireproof safe for secure storage of cash and documents. Condition and size are confirmed on enquiry, and availability varies with current stock.",
-    images: ["/images/products/safe.svg"],
-    imageAlt: "Technical illustration of a fairly used fireproof safe",
+    images: ["/images/products/fireproof-safes/fairly-used-fireproof-safe.webp"],
+    imageAlt: "Fairly used fireproof safe",
     featured: false,
   },
   {
@@ -172,8 +172,8 @@ export const products: Product[] = [
     summary: "Ultraviolet verification for banknotes at the point of sale.",
     description:
       "A UV money detector for checking banknotes under ultraviolet light. Confirm the available model, price and availability with Murphy Ventures.",
-    images: ["/images/products/money-detector.svg"],
-    imageAlt: "Technical illustration of a UV money detector with a banknote",
+    images: ["/images/products/currency-detectors/uv-money-detector.webp"],
+    imageAlt: "UV money detector checking a banknote",
     featured: true,
   },
   {
@@ -188,8 +188,8 @@ export const products: Product[] = [
     summary: "Detection equipment for checking notes before they are accepted.",
     description:
       "Counterfeit money detection equipment for cash-handling points. The models available and their features are confirmed on enquiry, together with pricing and availability.",
-    images: ["/images/products/money-detector.svg"],
-    imageAlt: "Technical illustration of a counterfeit money detector",
+    images: ["/images/products/currency-detectors/counterfeit-money-detector.webp"],
+    imageAlt: "Counterfeit money detector with UV lamp",
     featured: false,
   },
   {
@@ -204,8 +204,8 @@ export const products: Product[] = [
     summary: "Printed calculation records for counter and office use.",
     description:
       "A printing calculator for office and counter work, producing a printed record of calculations. Available models are confirmed on enquiry, along with price and availability.",
-    images: ["/images/products/calculator.svg"],
-    imageAlt: "Technical illustration of a printing calculator with paper roll",
+    images: ["/images/products/office-equipment/printing-calculator.webp"],
+    imageAlt: "Thermal printing calculator with paper roll",
     featured: true,
   },
   {
@@ -220,8 +220,8 @@ export const products: Product[] = [
     description:
       "The CW-1600 cheque writing machine is referenced in the Murphy Ventures catalogue. Confirm the current configuration, condition and price with our team before ordering.",
     specifications: [{ label: "Model", value: "CW-1600" }],
-    images: ["/images/products/cheque-writer.svg"],
-    imageAlt: "Technical illustration of a CW-1600 cheque writing machine",
+    images: ["/images/products/office-equipment/cw-1600-cheque-writer.webp"],
+    imageAlt: "CW-1600 electronic cheque writer",
     featured: true,
   },
   {
@@ -236,8 +236,8 @@ export const products: Product[] = [
     summary: "Widmer office equipment sourced to order.",
     description:
       "Office equipment supplied under the Widmer name. Tell us which item you need and we will confirm what is available, along with pricing and condition.",
-    images: ["/images/products/calculator.svg"],
-    imageAlt: "Technical illustration of Widmer office equipment",
+    images: ["/images/products/office-equipment/widmer-office-equipment.webp"],
+    imageAlt: "Widmer office date and time stamp machine",
     featured: false,
   },
 ];

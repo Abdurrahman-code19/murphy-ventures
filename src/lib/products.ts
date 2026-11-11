@@ -22,6 +22,16 @@ export function priceLabel(product: Product) {
   return formatNaira(product.price);
 }
 
+/**
+ * Locally stored product photos ship as a 1200w master and a 640w variant.
+ * This builds the responsive srcSet so phones fetch the lighter file.
+ */
+export function productImageSrcSet(src: string) {
+  const base = src.replace(/\.webp$/i, "");
+  if (base === src) return undefined;
+  return `${base}-640.webp 640w, ${src} 1200w`;
+}
+
 export function getProductBySlug(slug: string) {
   return products.find((product) => product.slug === slug);
 }

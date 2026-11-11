@@ -9,6 +9,7 @@ import {
   getProductBySlug,
   getRelatedProducts,
   priceLabel,
+  productImageSrcSet,
 } from "../lib/products";
 import { breadcrumbSchema, productSchema } from "../lib/schema";
 import { formatNaira } from "../lib/utils";
@@ -81,9 +82,14 @@ export default function ProductDetail() {
                 <div aria-hidden="true" className="absolute inset-0 bg-blueprint-light opacity-50" />
                 <img
                   src={product.images[0]}
+                  srcSet={productImageSrcSet(product.images[0])}
+                  sizes="(min-width: 1024px) 620px, (min-width: 640px) 88vw, 100vw"
                   alt={product.imageAlt}
-                  width={800}
-                  height={600}
+                  width={1200}
+                  height={900}
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                   className="relative w-full"
                 />
                 <span className="absolute left-4 top-4">
@@ -93,8 +99,8 @@ export default function ProductDetail() {
                 </span>
               </div>
               <p className="mt-3 text-[11px] leading-relaxed text-muted">
-                Illustration shown. Ask us for current photos of the available unit before you
-                buy.
+                Product photo for reference. Ask us for current photos of the exact unit — finish,
+                condition and included accessories can vary.
               </p>
             </div>
 

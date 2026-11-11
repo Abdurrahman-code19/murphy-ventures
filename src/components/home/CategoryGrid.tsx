@@ -1,7 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { categories } from "../../data/categories";
-import { categoryCount } from "../../lib/products";
+import { categoryCount, productImageSrcSet } from "../../lib/products";
 import type { Category } from "../../types";
 import { cn } from "../../lib/utils";
 import { buttonStyles } from "../shared/Button";
@@ -90,8 +90,8 @@ function CategoryCard({
           src={category.image}
           alt=""
           aria-hidden="true"
-          width={800}
-          height={600}
+          width={1200}
+          height={900}
           loading="lazy"
           className="pointer-events-none absolute -bottom-4 -right-3 w-32 opacity-[0.07] transition-opacity duration-500 group-hover:opacity-[0.12]"
         />
@@ -123,10 +123,14 @@ function CategoryCard({
           <div className="rounded-[14px] border border-white/10 bg-white p-3 shadow-float transition-transform duration-500 group-hover:rotate-[-2deg] group-hover:scale-[1.02]">
             <img
               src={category.image}
+              srcSet={productImageSrcSet(category.image)}
+              sizes="(min-width: 1024px) 250px, 40vw"
               alt=""
               aria-hidden="true"
-              width={800}
-              height={600}
+              width={1200}
+              height={900}
+              loading="lazy"
+              decoding="async"
               className="w-full"
             />
           </div>

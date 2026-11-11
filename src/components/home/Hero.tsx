@@ -1,6 +1,7 @@
 import { ArrowUpRight, Check, Phone, Wrench } from "lucide-react";
 import { Link } from "react-router-dom";
 import { site } from "../../config/site";
+import { productImageSrcSet } from "../../lib/products";
 import { formatNaira } from "../../lib/utils";
 import { buttonStyles } from "../shared/Button";
 import { Container } from "../shared/Container";
@@ -110,13 +111,19 @@ export function Hero() {
                   </span>
                 </div>
 
-                <div className="relative bg-ivory/70 bg-blueprint-light px-5 pb-1 pt-4">
+                <div className="relative bg-white">
                   <img
-                    src="/images/products/banknote-counter.svg"
-                    alt="Illustration of a banknote counting machine"
-                    width={800}
-                    height={600}
-                    className="mx-auto w-full max-w-[440px]"
+                    src="/images/products/money-counting-machines/banknote-counting-machines.webp"
+                    srcSet={productImageSrcSet(
+                      "/images/products/money-counting-machines/banknote-counting-machines.webp",
+                    )}
+                    sizes="(min-width: 1024px) 540px, 92vw"
+                    alt="Banknote counting machine, the kind supplied by Murphy Ventures"
+                    width={1200}
+                    height={900}
+                    fetchPriority="high"
+                    decoding="async"
+                    className="w-full"
                   />
                 </div>
 

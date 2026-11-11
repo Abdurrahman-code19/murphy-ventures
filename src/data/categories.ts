@@ -7,7 +7,7 @@ export const categories: Category[] = [
     shortName: "Cash Management",
     description:
       "Banknote counting machines and cash-handling equipment for banks, businesses and busy offices.",
-    image: "/images/products/banknote-counter.svg",
+    image: "/images/products/money-counting-machines/banknote-counting-machines.webp",
     icon: "banknote",
   },
   {
@@ -16,7 +16,7 @@ export const categories: Category[] = [
     shortName: "Time Recording",
     description:
       "Time recording and time stamp machines for attendance tracking and document control.",
-    image: "/images/products/time-recorder.svg",
+    image: "/images/products/time-stamp-machines/targetmax-tl-50-time-recording-machine.webp",
     icon: "clock",
   },
   {
@@ -25,7 +25,7 @@ export const categories: Category[] = [
     shortName: "Security",
     description:
       "Fireproof safes and secure storage for cash, documents and other valuables.",
-    image: "/images/products/safe.svg",
+    image: "/images/products/fireproof-safes/fireproof-safe.webp",
     icon: "shield",
   },
   {
@@ -34,7 +34,7 @@ export const categories: Category[] = [
     shortName: "Money Verification",
     description:
       "Counterfeit detection and note verification equipment for confident cash handling.",
-    image: "/images/products/money-detector.svg",
+    image: "/images/products/currency-detectors/uv-money-detector.webp",
     icon: "scan",
   },
   {
@@ -43,7 +43,7 @@ export const categories: Category[] = [
     shortName: "Office Equipment",
     description:
       "Printing calculators, cheque writers and dependable office machines for daily operations.",
-    image: "/images/products/calculator.svg",
+    image: "/images/products/office-equipment/printing-calculator.webp",
     icon: "calculator",
   },
 ];

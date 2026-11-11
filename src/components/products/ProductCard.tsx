@@ -1,7 +1,13 @@
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import type { Product } from "../../types";
-import { availabilityLabels, categoryName, conditionLabels, priceLabel } from "../../lib/products";
+import {
+  availabilityLabels,
+  categoryName,
+  conditionLabels,
+  priceLabel,
+  productImageSrcSet,
+} from "../../lib/products";
 import { productEnquiryMessage, whatsappLink } from "../../lib/whatsapp";
 import { cn } from "../../lib/utils";
 import { Badge } from "../shared/Badge";
@@ -17,12 +23,14 @@ export function ProductCard({ product }: { product: Product }) {
       >
         <img
           src={product.images[0]}
-          alt=""
-          width={800}
-          height={600}
+          srcSet={productImageSrcSet(product.images[0])}
+          sizes="(min-width: 1280px) 380px, (min-width: 1024px) 30vw, (min-width: 640px) 46vw, 88vw"
+          alt={product.imageAlt}
+          width={1200}
+          height={900}
           loading="lazy"
           decoding="async"
-          className="h-full w-full object-contain p-3 transition-transform duration-700 ease-out group-hover:scale-[1.045]"
+          className="h-full w-full object-contain p-2 transition-transform duration-700 ease-out group-hover:scale-[1.045]"
         />
         <span className="absolute left-3 top-3">
           <Badge tone={product.condition === "fairly-used" ? "gold" : "outline"}>

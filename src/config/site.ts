@@ -28,9 +28,8 @@ export const site = {
   },
 
   /**
-   * Both lines are kept configurable. The client initially described the first
-   * number as WhatsApp, but this has not been independently verified.
-   * Confirm the WhatsApp line before launch and update `whatsapp.number` only.
+   * Both lines are kept configurable. The primary line below is the confirmed
+   * WhatsApp line supplied by the client; the alternate line is voice only.
    */
   phones: [
     { label: "0802 331 0563", tel: "+2348023310563", note: "Primary line" },
@@ -38,7 +37,7 @@ export const site = {
   ],
 
   whatsapp: {
-    /** International format, digits only. TODO: confirm which line is WhatsApp. */
+    /** International format, digits only. Confirmed by the client. */
     number: "2348023310563",
     display: "0802 331 0563",
   },

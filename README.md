@@ -60,7 +60,7 @@ All phone links, WhatsApp links, the address, map links, price guidance and cano
 
 ### WhatsApp (important)
 
-`whatsapp.number` is set to `2348023310563` (the primary line). **The client has not confirmed which line is WhatsApp** — confirm before launch and change only `whatsapp.number` / `whatsapp.display`.
+`whatsapp.number` is set to `2348023310563` — the primary line, confirmed by the client as the WhatsApp line. Change only `whatsapp.number` / `whatsapp.display` if that ever changes.
 
 ---
 
@@ -89,12 +89,26 @@ Nothing is transmitted by the website and no "sent" confirmation is shown. The v
 
 ```
 public/images/branding/   emblem, full logo, favicons, apple-touch icon, og-image.jpg
-public/images/products/   six hand-drawn SVG product illustrations
+public/images/products/
+  money-counting-machines/  4 products × 2 sizes
+  time-stamp-machines/      3 products × 2 sizes
+  fireproof-safes/          2 products × 2 sizes
+  currency-detectors/       2 products × 2 sizes
+  office-equipment/         3 products × 2 sizes
 ```
 
+- **Product photography is stored locally.** 14 source photos were downloaded and normalised to WebP — a 1200×900 master and a 640×480 variant per product (28 files total, all on a white canvas). No product image is loaded from an external URL.
+- Each product photo is mapped to its own listing in `src/data/products.ts` and rendered responsively with `srcSet`/`sizes`. Alt text is descriptive and product-specific.
+- These are **reference photos** collected from public product listings, not studio photos of stock on hand. Detail pages say so and invite buyers to request current photos of the exact unit. Replace with the client's own photos when available. Per-image sources are listed in [`IMAGE-SOURCES.md`](IMAGE-SOURCES.md).
+- The `*.svg` line illustrations remain in `public/images/products/` only as unused legacy files — nothing in `src/` references them.
 - The supplied emblem is used unmodified; the header pairs it with a typographic lockup, while the full supplied logo is used in larger brand contexts.
-- **No product photography was supplied.** Product visuals are original line illustrations labelled “Illustration shown” on detail pages. Replace them with real photos when available.
 - `og-image.jpg` (1200×630) is generated from the brand palette and emblem.
+
+---
+
+## Mobile dock
+
+On screens below `lg`, a floating glass dock (`.src/components/layout/MobileDock.tsx`) provides the five primary destinations — Home, About, Products, Services, Contact — with a spring-animated active pill, Lucide icons, safe-area padding and backdrop blur. A WhatsApp shortcut floats above it. The dock replaces the old three-button bottom bar, desktop navigation is untouched, and a layout spacer keeps the footer/content from sitting underneath it. All motion respects `prefers-reduced-motion`.
 
 ---
 
@@ -120,6 +134,8 @@ public/images/products/   six hand-drawn SVG product illustrations
 - `npm run typecheck` — clean.
 - `npm run build` — production build succeeds.
 - Manual/automated browser QA across 320 / 375 / 430 / 768 / 1024 / 1440 px: zero horizontal overflow; one H1 per page; no missing image alts, unnamed controls or unlabelled fields.
+- Mobile dock verified at 320 / 375 / 430 px: active states follow the route, no content or footer overlap, WhatsApp shortcut clears the dock.
+- All 28 local product WebP files resolve in the production build; no external image URLs remain in `src/` or `public/`.
 - Filters, search, empty state, URL parameters, product deep links, accordions, mobile menu + Escape, form validation and WhatsApp handoff verified.
 - 404 routes (unknown page and unknown product slug) return the branded not-found page with `noindex`.
 
@@ -127,13 +143,12 @@ public/images/products/   six hand-drawn SVG product illustrations
 
 ## Known gaps / client input required
 
-1. **WhatsApp line confirmation** — which number receives WhatsApp messages.
-2. **Live domain** — `murphyventures.ng` is a placeholder used for canonical URLs, OG tags, sitemap and robots.
-3. **Opening hours** — deliberately not published; the site asks visitors to call first.
-4. **Email address** — not supplied; shown as “Email not yet published”.
-5. **Confirmed prices, models and stock** — every listing is “Price on Request” with availability “unknown”; the ₦120,000–₦1,800,000 range is guidance only.
-6. **Product photography** — illustrations are temporary placeholders.
-7. Optional: delivery/coverage policy, warranty terms, staff/company history details, testimonials (none were supplied and none were invented).
+1. **Live domain** — `murphyventures.ng` is a placeholder used for canonical URLs, OG tags, sitemap and robots. Update it once a domain is chosen.
+2. **Opening hours** — deliberately not published; the site asks visitors to call first.
+3. **Email address** — not supplied; shown as “Email not yet published”.
+4. **Confirmed prices, models and stock** — every listing is “Price on Request” with availability “unknown”; the ₦120,000–₦1,800,000 range is guidance only.
+5. **Product photography** — current photos are reference images from public listings, not photos of the client's own stock.
+6. Optional: delivery/coverage policy, warranty terms, staff/company history details, testimonials (none were supplied and none were invented).
 
 ---
 
