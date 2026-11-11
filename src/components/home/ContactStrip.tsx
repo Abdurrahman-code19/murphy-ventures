@@ -58,7 +58,7 @@ export function ContactStrip() {
                       <a
                         key={phone.tel}
                         href={`tel:${phone.tel}`}
-                        className="text-[13px] font-medium text-ink transition-colors hover:text-royal"
+                        className="block py-1 text-[13px] font-medium text-ink transition-colors hover:text-royal"
                       >
                         {phone.label}
                       </a>

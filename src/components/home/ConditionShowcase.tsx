@@ -47,7 +47,7 @@ export function ConditionShowcase() {
               budget against working life. We confirm the exact condition of each machine before
               you commit.
             </p>
-            <p className="mt-6 flex items-start gap-2.5 text-[11.5px] leading-relaxed text-white/40">
+            <p className="mt-6 flex items-start gap-2.5 text-[11.5px] leading-relaxed text-white/60">
               <span aria-hidden="true" className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-gold" />
               Not every model is available in both conditions. Tell us what you need and we will
               confirm the options.

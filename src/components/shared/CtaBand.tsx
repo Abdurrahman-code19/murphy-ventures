@@ -67,7 +67,7 @@ export function CtaBand({
               Or request a repair
               <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
             </Link>
-            <p className="mt-4 text-[11px] text-white/40">
+            <p className="mt-4 text-[11px] text-white/60">
               Prices and availability are confirmed on enquiry.
             </p>
           </div>

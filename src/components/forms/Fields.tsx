@@ -8,7 +8,7 @@ import type {
 import { cn } from "../../lib/utils";
 
 const controlBase =
-  "w-full rounded-[10px] border bg-white px-3.5 text-[13.5px] text-ink outline-none transition-colors placeholder:text-muted/70 focus:border-royal focus:ring-2 focus:ring-royal/10 disabled:cursor-not-allowed disabled:bg-ivory-deep";
+  "w-full rounded-[10px] border bg-white px-3.5 text-[13.5px] text-ink transition-colors placeholder:text-muted focus:border-royal focus:ring-2 focus:ring-royal/10 disabled:cursor-not-allowed disabled:bg-ivory-deep";
 
 function FieldShell({
   id,

@@ -58,7 +58,7 @@ export function FormHandoff({
       <h2
         ref={headingRef}
         tabIndex={-1}
-        className="font-display text-[22px] font-semibold tracking-[-0.02em] text-navy outline-none"
+        className="font-display text-[22px] font-semibold tracking-[-0.02em] text-navy"
       >
         {title}
       </h2>
@@ -80,7 +80,7 @@ export function FormHandoff({
           value={message}
           rows={9}
           aria-label="Prepared WhatsApp message"
-          className="w-full resize-y rounded-[8px] border border-line bg-white p-3 font-sans text-[12.5px] leading-relaxed text-ink outline-none focus:border-royal"
+          className="w-full resize-y rounded-[8px] border border-line bg-white p-3 font-sans text-[12.5px] leading-relaxed text-ink focus:border-royal focus:ring-2 focus:ring-royal/10"
         />
       </div>
 

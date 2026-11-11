@@ -66,8 +66,8 @@ export function ServicesOverview() {
           <div>
             <ul className="border-t border-line">
               {services.map((service, index) => (
-                <Reveal key={service.slug} delay={Math.min(index * 0.04, 0.16)}>
-                  <li className="border-b border-line">
+                <li key={service.slug} className="border-b border-line">
+                  <Reveal delay={Math.min(index * 0.04, 0.16)}>
                     <Link
                       to={`/services#${service.slug}`}
                       className="group flex items-start gap-5 py-6 transition-colors sm:gap-7"
@@ -90,8 +90,8 @@ export function ServicesOverview() {
                         </span>
                       </span>
                     </Link>
-                  </li>
-                </Reveal>
+                  </Reveal>
+                </li>
               ))}
             </ul>
             <Link

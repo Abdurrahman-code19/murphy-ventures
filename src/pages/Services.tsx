@@ -207,7 +207,7 @@ export default function Services() {
             </article>
           </div>
 
-          <p className="mt-6 max-w-2xl text-[11px] leading-relaxed text-white/35">
+          <p className="mt-6 max-w-2xl text-[11px] leading-relaxed text-white/55">
             Sending a request through this website prepares a WhatsApp message — it does not book
             a repair automatically. The arrangement is confirmed when you speak with our team.
           </p>

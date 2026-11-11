@@ -72,13 +72,16 @@ export function WhyChoose() {
             {reasons.map((reason, index) => {
               const Icon = reason.icon;
               return (
-                <Reveal key={reason.title} delay={Math.min(index * 0.04, 0.2)}>
-                  <li className="group border-t border-line py-6 transition-colors hover:border-gold">
+                <li
+                  key={reason.title}
+                  className="group border-t border-line py-6 transition-colors hover:border-gold"
+                >
+                  <Reveal delay={Math.min(index * 0.04, 0.2)}>
                     <div className="flex items-center justify-between">
                       <span className="flex h-8 w-8 items-center justify-center rounded-full bg-ivory-deep text-gold-ink">
                         <Icon aria-hidden="true" className="h-4 w-4" />
                       </span>
-                      <span className="text-[9.5px] font-semibold tracking-[0.2em] text-muted/70">
+                      <span className="text-[9.5px] font-semibold tracking-[0.2em] text-muted">
                         {String(index + 1).padStart(2, "0")}
                       </span>
                     </div>
@@ -88,8 +91,8 @@ export function WhyChoose() {
                     <p className="mt-2 text-[12.5px] leading-relaxed text-muted">
                       {reason.description}
                     </p>
-                  </li>
-                </Reveal>
+                  </Reveal>
+                </li>
               );
             })}
           </ul>

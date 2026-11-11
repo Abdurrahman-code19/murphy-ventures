@@ -102,7 +102,7 @@ export function Footer() {
                 <li key={phone.tel}>
                   <a
                     href={`tel:${phone.tel}`}
-                    className="flex items-center gap-3 text-[13.5px] text-white/70 transition-colors hover:text-gold-soft"
+                    className="flex items-center gap-3 py-1 text-[13.5px] text-white/70 transition-colors hover:text-gold-soft"
                   >
                     <Phone aria-hidden="true" className="h-4 w-4 text-gold" />
                     {phone.label}
@@ -113,7 +113,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 border-t border-white/10 py-6 text-[11.5px] text-white/40 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-4 border-t border-white/10 py-6 text-[11.5px] text-white/60 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
           <p className="max-w-md sm:text-right">
             Product pricing, condition and availability are confirmed on enquiry.

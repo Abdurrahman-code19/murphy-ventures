@@ -321,7 +321,7 @@ export default function RequestRepair() {
               </div>
             </div>
 
-            <aside className="space-y-4">
+            <section aria-label="Before you send" className="space-y-4">
               <div className="rounded-[18px] border border-line bg-white p-6 sm:p-7">
                 <Eyebrow className="mb-3">Before you send</Eyebrow>
                 <h2 className="font-display text-[18px] font-semibold text-navy">
@@ -360,7 +360,7 @@ export default function RequestRepair() {
                       >
                         <Phone aria-hidden="true" className="h-4 w-4 text-gold" />
                         {phone.label}
-                        <span className="text-[10px] font-normal uppercase tracking-[0.12em] text-white/35">
+                        <span className="text-[10px] font-normal uppercase tracking-[0.12em] text-white/55">
                           {phone.note}
                         </span>
                       </a>
@@ -388,7 +388,7 @@ export default function RequestRepair() {
                   expect.
                 </p>
               </div>
-            </aside>
+            </section>
           </div>
         </Container>
       </section>

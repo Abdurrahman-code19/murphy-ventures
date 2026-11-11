@@ -50,7 +50,7 @@ export function ProductFilters({
             onChange={(event) => onSearchChange(event.target.value)}
             placeholder="Search equipment, brand or model"
             aria-label="Search equipment"
-            className="h-11 w-full rounded-[10px] border border-line bg-ivory/70 pl-10 pr-10 text-[13.5px] text-ink outline-none transition-colors placeholder:text-muted/80 focus:border-royal focus:bg-white focus:ring-2 focus:ring-royal/10"
+            className="h-11 w-full rounded-[10px] border border-line bg-ivory/70 pl-10 pr-10 text-[13.5px] text-ink transition-colors placeholder:text-muted focus:border-royal focus:bg-white focus:ring-2 focus:ring-royal/10"
           />
           {search ? (
             <button
@@ -114,7 +114,7 @@ export function ProductFilters({
             />
           ))}
         </div>
-        <p className="text-[11px] text-muted/80">
+        <p className="text-[11px] text-muted">
           Items with unconfirmed condition appear under “All conditions”.
         </p>
       </div>

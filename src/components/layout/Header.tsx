@@ -43,7 +43,7 @@ export function Header() {
       }
       if (mobileOpen) {
         setMobileOpen(false);
-        menuButtonRef.current?.focus();
+        window.requestAnimationFrame(() => menuButtonRef.current?.focus());
       }
     };
     document.addEventListener("keydown", onKeyDown);
@@ -54,7 +54,7 @@ export function Header() {
 
   return (
     <>
-      <div className="bg-navy text-white/70 on-dark">
+      <div role="region" aria-label="Location and contact" className="bg-navy text-white/70 on-dark">
         <div className="mx-auto flex h-9 w-full max-w-[1280px] items-center justify-between gap-4 px-5 text-[10.5px] tracking-[0.08em] sm:px-8 lg:px-10">
           <p className="flex min-w-0 items-center gap-2">
             <MapPin aria-hidden="true" className="h-3 w-3 shrink-0 text-gold" />
@@ -234,6 +234,7 @@ export function Header() {
 function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
   const reduceMotion = useReducedMotion();
   const closeRef = useRef<HTMLButtonElement>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -241,6 +242,62 @@ function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
     const timer = window.setTimeout(() => closeRef.current?.focus(), 60);
     return () => window.clearTimeout(timer);
   }, [open]);
+
+  // Keep keyboard and screen-reader focus inside the modal while it is open.
+  useEffect(() => {
+    if (!open) return;
+    const dialog = dialogRef.current;
+    const root = document.getElementById("root");
+    const siblings = root
+      ? Array.from(root.children).filter((element) => element !== dialog)
+      : [];
+
+    siblings.forEach((element) => element.setAttribute("inert", ""));
+
+    const focusableItems = () =>
+      dialog
+        ? Array.from(
+            dialog.querySelectorAll<HTMLElement>(
+              'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
+            ),
+          ).filter((element) => element.getClientRects().length > 0)
+        : [];
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== "Tab" || !dialog) return;
+      const items = focusableItems();
+      if (!items.length) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      const active = document.activeElement;
+
+      if (!dialog.contains(active)) {
+        event.preventDefault();
+        (event.shiftKey ? last : first).focus();
+        return;
+      }
+      if (event.shiftKey && active === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && active === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      siblings.forEach((element) => element.removeAttribute("inert"));
+    };
+  }, [open]);
+
+  function handleClose() {
+    onClose();
+    window.requestAnimationFrame(() => {
+      document.querySelector<HTMLButtonElement>('button[aria-controls="mobile-menu"]')?.focus();
+    });
+  }
 
   useEffect(() => {
     onClose();
@@ -252,6 +309,7 @@ function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
     <AnimatePresence>
       {open ? (
         <motion.div
+          ref={dialogRef}
           id="mobile-menu"
           role="dialog"
           aria-modal="true"
@@ -269,7 +327,7 @@ function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
               <button
                 ref={closeRef}
                 type="button"
-                onClick={onClose}
+                onClick={handleClose}
                 aria-label="Close site menu"
                 className="flex h-11 w-11 items-center justify-center rounded-[10px] border border-white/20 text-ivory transition-colors hover:bg-white/10"
               >
@@ -291,7 +349,7 @@ function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
                         )
                       }
                     >
-                      <span className="text-[10px] font-medium tracking-[0.2em] text-white/30">
+                      <span className="text-[10px] font-medium tracking-[0.2em] text-white/55">
                         {String(index + 1).padStart(2, "0")}
                       </span>
                       {item.label}
@@ -345,8 +403,8 @@ function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
 
             <Button
               variant="ghost-light"
-              onClick={onClose}
-              className="mt-4 self-center text-xs text-white/45"
+              onClick={handleClose}
+              className="mt-4 self-center text-xs text-white/60"
             >
               Close menu
             </Button>

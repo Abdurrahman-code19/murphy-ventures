@@ -32,7 +32,7 @@ export function Layout() {
 
       <Header />
 
-      <main id="main" ref={mainRef} tabIndex={-1} className="outline-none">
+      <main id="main" ref={mainRef} tabIndex={-1}>
         <Suspense fallback={<PageFallback />}>
           {reduceMotion ? (
             <Outlet />

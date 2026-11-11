@@ -79,19 +79,21 @@ export function MobileDock() {
 /** Floating WhatsApp shortcut, parked above the dock so it never covers it. */
 export function WhatsAppFab() {
   return (
-    <a
-      href={whatsappLink(generalEnquiryMessage())}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Chat with Murphy Ventures on WhatsApp"
-      className={cn(
-        "fixed right-4 z-40 flex h-12 w-12 items-center justify-center rounded-full",
-        "bg-[#25d366] text-white shadow-[0_16px_32px_-14px_rgba(37,211,102,0.9)]",
-        "ring-4 ring-white/70 transition-transform duration-200 active:scale-95 lg:hidden",
-      )}
-      style={{ bottom: "calc(env(safe-area-inset-bottom) + 5.75rem)" }}
-    >
-      <WhatsAppIcon className="h-6 w-6" />
-    </a>
+    <aside aria-label="WhatsApp contact">
+      <a
+        href={whatsappLink(generalEnquiryMessage())}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with Murphy Ventures on WhatsApp"
+        className={cn(
+          "fixed right-4 z-40 flex h-12 w-12 items-center justify-center rounded-full",
+          "bg-[#25d366] text-white shadow-[0_16px_32px_-14px_rgba(37,211,102,0.9)]",
+          "ring-4 ring-white/70 transition-transform duration-200 active:scale-95 lg:hidden",
+        )}
+        style={{ bottom: "calc(env(safe-area-inset-bottom) + 5.75rem)" }}
+      >
+        <WhatsAppIcon className="h-6 w-6" />
+      </a>
+    </aside>
   );
 }
