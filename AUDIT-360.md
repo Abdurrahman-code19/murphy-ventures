@@ -53,6 +53,8 @@ P0 + P1 fixes are implemented and verified against a local production build (`vi
 - Dock: unchanged geometry (70 px, 5 × 46 px items, `aria-current`), FAB now in a landmark, **no footer content covered**.
 - `npm run typecheck` and `npm run build` pass.
 
+**Live deployment re-check** (production, after `b3b79c5`): CLS 0.0022–0.0033 on catalogue route/width combinations; axe clean on all 10 route/width states; menu trap holds with `main`/`header` inert and focus restored; focus rings `2px solid`; dock targets 46 px with `aria-current`; no footer content covered. Cache headers confirmed live: `/assets/*` → `max-age=31536000, immutable`, `/images/*` → `max-age=604800, stale-while-revalidate=86400`.
+
 Raw evidence: `qa/audit/verify-after.json`, `qa/audit/21st-review-after.json`, `qa/audit/layout-check.cjs`, `qa/audit/shots-after/`.
 
 ---
